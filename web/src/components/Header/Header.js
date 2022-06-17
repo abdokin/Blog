@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <nav>
-        <ul className="bg-slate-100 flex gap-3 p-5 text-lg align-top">
+        <ul className="bg-black flex gap-3 p-5 text-base align-top">
           <li className="flex">
             <Link to={routes.home()}>Home</Link>
           </li>
@@ -28,7 +28,7 @@ const Header = () => {
           <li className="flex">
             {isAuthenticated ? (
               <div>
-                <span>Welcome {currentUser.name}</span>{' '}
+                <span className="px-3">Welcome {currentUser.name}</span>
                 <button
                   type="button"
                   onClick={logOut}

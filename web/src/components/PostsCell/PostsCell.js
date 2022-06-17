@@ -1,4 +1,4 @@
-import BlogPost from "../BlogPost/BlogPost"
+import BlogPost from '../BlogPost/BlogPost'
 
 export const QUERY = gql`
   query PostsQuery {
@@ -25,10 +25,10 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ posts }) => {
   return (
-    <ul>
+    <>
       {posts.map((item) => {
         return <BlogPost key={item.id} post={item} />
       })}
-    </ul>
+    </>
   )
 }
